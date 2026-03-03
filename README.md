@@ -67,7 +67,7 @@ src/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/omshi255/yuvasoft_todo_app
 cd your-project-name
 ```
 
@@ -162,13 +162,6 @@ No backend required.
 - Authentication
 - Overdue Detection
 - Priority Levels
-
----
-
-## 📌 Author
-
-Your Name  
-Frontend Developer  
 
 ---
 
