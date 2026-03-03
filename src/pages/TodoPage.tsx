@@ -1,13 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import TodoForm from "../features/todos/components/TodoForm";
 import TodoTable from "../features/todos/components/TodoTable";
 import TodoFilters from "../features/todos/components/TodoFilters";
 import TodoChart from "../features/todos/components/TodoChart";
-import { useAppSelector } from "../app/hooks";
-import { selectStats } from "../features/todos/todoSelector";
+
 
 const TodoPage = () => {
-  const stats = useAppSelector(selectStats);
 
   return (
     <div className="w-full min-h-screen bg-gray-50">

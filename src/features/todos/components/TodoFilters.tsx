@@ -27,40 +27,21 @@ const TodoFilters = () => {
         />
       </div>
 
-      {/* Right Section - Filter Buttons */}
-      <div className="flex gap-3">
-        <button
-          onClick={() => handleFilterChange("all")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-            filter === "all"
-              ? "bg-blue-600 text-white shadow"
-              : "bg-gray-100 hover:bg-gray-200"
-          }`}
+      {/* Right Section - Filter Dropdown */}
+      <div className="w-full md:w-48">
+        <select
+          value={filter}
+          onChange={(e) =>
+            handleFilterChange(
+              e.target.value as "all" | "pending" | "completed",
+            )
+          }
+          className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition bg-white"
         >
-          All
-        </button>
-
-        <button
-          onClick={() => handleFilterChange("pending")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-            filter === "pending"
-              ? "bg-yellow-500 text-white shadow"
-              : "bg-gray-100 hover:bg-gray-200"
-          }`}
-        >
-          Pending
-        </button>
-
-        <button
-          onClick={() => handleFilterChange("completed")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-            filter === "completed"
-              ? "bg-green-600 text-white shadow"
-              : "bg-gray-100 hover:bg-gray-200"
-          }`}
-        >
-          Completed
-        </button>
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
       </div>
     </div>
   );
